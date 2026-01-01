@@ -1,0 +1,301 @@
+.ColumnLeftMenu{
+	float: left;
+}
+.ColumnRightContent{
+	display: table;
+}
+
+.FormTopPanel {
+	BORDER-RIGHT: #e6c8a0 1px solid; 
+	BORDER-TOP: #e6c8a0 1px solid; 
+	BORDER-LEFT: #e6c8a0 1px solid; 
+	WIDTH: 100%; 
+	COLOR: #800000; 
+	BORDER-BOTTOM: #e6c8a0 1px solid; 
+	FONT-FAMILY: Arial, Verdana; 
+	BACKGROUND-COLOR: #ffe6c8;
+}
+.FormTopPanelName {
+	PADDING-RIGHT: 10px; 
+	PADDING-LEFT: 10px; 
+	FONT-WEIGHT: bold; 
+	FONT-SIZE: 17px; 
+	VERTICAL-ALIGN: bottom; 
+	HEIGHT: 30px; 
+	TEXT-ALIGN: left;
+}
+.FormTopPanelOperations {
+	PADDING-RIGHT: 10px; 
+	PADDING-LEFT: 10px; 
+	FONT-SIZE: 11px; 
+	VERTICAL-ALIGN: middle; 
+	HEIGHT: 30px; 
+	TEXT-ALIGN: left;
+}
+.FormTopPanelInfo {
+	PADDING-RIGHT: 10px; 
+	PADDING-LEFT: 10px; 
+	FONT-SIZE: 11px; 
+	VERTICAL-ALIGN: middle; 
+	HEIGHT: 15px; 
+	TEXT-ALIGN: left;
+}
+.FormTopEdFind {
+	FONT-SIZE: 11px; 
+	VERTICAL-ALIGN: middle; 
+	HEIGHT: 15px; 
+	TEXT-ALIGN: left;
+}
+.FormTopButtonOk {
+	BACKGROUND-POSITION: left center; 
+	PADDING-LEFT: 17px; 
+    FONT-SIZE: 11px; 
+    BACKGROUND-IMAGE: url('../images/btOk.BMP'); 
+    VERTICAL-ALIGN: middle; 
+    BACKGROUND-REPEAT: no-repeat; 
+    HEIGHT: 25px; BACKGROUND-COLOR: buttonface; 
+    TEXT-ALIGN: center;
+}
+.FormTopButtonSave {
+	BACKGROUND-POSITION: left center; 
+    PADDING-LEFT: 17px; 
+    FONT-SIZE: 11px; 
+    BACKGROUND-IMAGE: url('../images/btSave.BMP'); 
+    VERTICAL-ALIGN: middle; 
+    BACKGROUND-REPEAT: no-repeat; 
+    HEIGHT: 25px; 
+    BACKGROUND-COLOR: buttonface; 
+    TEXT-ALIGN: center;
+}
+.FormTopButtonCancel {
+	BACKGROUND-POSITION: left center; 
+    PADDING-LEFT: 17px; 
+    FONT-SIZE: 11px; 
+    BACKGROUND-IMAGE: url('../images/btCancel.BMP'); 
+    VERTICAL-ALIGN: middle; 
+    BACKGROUND-REPEAT: no-repeat; 
+    HEIGHT: 25px; 
+    BACKGROUND-COLOR: buttonface; 
+    TEXT-ALIGN: center;
+}
+.FormTopButtonUpdate {
+	BACKGROUND-POSITION: left center; 
+    PADDING-LEFT: 17px; 
+    FONT-SIZE: 11px; 
+    BACKGROUND-IMAGE: url('../images/btAll.BMP'); 
+    VERTICAL-ALIGN: middle; 
+    BACKGROUND-REPEAT: no-repeat; 
+    HEIGHT: 25px; 
+    BACKGROUND-COLOR: buttonface; 
+    TEXT-ALIGN: center;
+}
+.FormTopButtonFind {
+	BACKGROUND-POSITION: left center; 
+    PADDING-LEFT: 17px; 
+    FONT-SIZE: 11px; 
+    BACKGROUND-IMAGE: url('../images/btFind.BMP'); 
+    VERTICAL-ALIGN: middle; 
+    BACKGROUND-REPEAT: no-repeat; 
+    HEIGHT: 25px; 
+    BACKGROUND-COLOR: buttonface; 
+    TEXT-ALIGN: center;
+}
+
+.GridPanel {
+	WIDTH: 100%;
+}
+.GridHeader {
+	FONT-WEIGHT: normal; 
+    FONT-SIZE: 10pt; 
+    COLOR: #800000; 
+    FONT-FAMILY: Arial, Verdana; 
+    BACKGROUND-COLOR: #ffe6c8; 
+    TEXT-ALIGN: center;
+}
+.GridRow {
+	FONT-WEIGHT: normal; 
+    FONT-SIZE: 10pt; 
+    COLOR: #280000; 
+    FONT-FAMILY: Arial, Verdana; 
+    BACKGROUND-COLOR: #f7ffff; 
+    TEXT-ALIGN: center;
+}
+.GridRowAlt {
+	FONT-WEIGHT: normal; 
+    FONT-SIZE: 10pt; 
+    COLOR: #280000; 
+    FONT-FAMILY: Arial, Verdana; 
+    BACKGROUND-COLOR: #e2ffff; 
+    TEXT-ALIGN: center;
+}
+.GridPager {
+	BORDER-RIGHT: #e6c8a0 1px solid; 
+	PADDING-RIGHT: 5px; 
+	PADDING-LEFT: 10px; 
+	FONT-WEIGHT: normal; 
+	FONT-SIZE: 9px; 
+	BORDER-LEFT: #e6c8a0 1px solid; 
+	COLOR: #800000; 
+	BORDER-BOTTOM: #e6c8a0 1px solid; 
+	FONT-FAMILY: Verdana, Arial; 
+	HEIGHT: 20px; 
+	BACKGROUND-COLOR: #ffe6c8; 
+	TEXT-ALIGN: left;
+}
+
+.MaterialTop {
+	PADDING-RIGHT: 10px; 
+	PADDING-LEFT: 10px; 
+	FONT-WEIGHT: normal; 
+	FONT-SIZE: 9px; 
+	COLOR: #800000; 
+	FONT-FAMILY: Verdana, Arial; 
+	HEIGHT: 20px; 
+	TEXT-ALIGN: left;
+}
+
+.MaterialText {
+	PADDING-RIGHT: 10px; 
+	PADDING-LEFT: 10px; 
+	FONT-SIZE: 10pt; 
+	PADDING-BOTTOM: 3px; 
+	COLOR: #280000; 
+	TEXT-INDENT: 10px; 
+	PADDING-TOP: 2px; 
+	FONT-FAMILY: Verdana, Arial; 
+	TEXT-ALIGN: justify;
+}
+
+.MaterialImage {
+	PADDING-RIGHT: 0px; 
+	PADDING-LEFT: 10px; 
+	VERTICAL-ALIGN: middle; 
+	WIDTH: 60px; 
+	COLOR: #280000; 
+	BACKGROUND-COLOR: #eeffff; 
+	TEXT-ALIGN: left;
+}
+.MaterialBottom {
+	PADDING-RIGHT: 10px; 
+	PADDING-LEFT: 10px; 
+	FONT-WEIGHT: normal; 
+	FONT-SIZE: 9px; 
+	COLOR: #800000; 
+	HEIGHT: 20px; 
+	TEXT-ALIGN: left;
+}
+
+.MenuRightSection {
+	FONT-SIZE: 12px; 
+	COLOR: #bc0000; 
+	BACKGROUND-COLOR: #88B3E6; 
+	BACKGROUND-IMAGE: url('../images/rightmenu_div.jpg'); 
+	FONT-FAMILY: Verdana, Arial; 
+	HEIGHT: 20px; 
+	TEXT-ALIGN: center; 
+	BORDER-RIGHT: #cdaa82 1px solid;
+	BORDER-TOP: #cdaa82 1px solid; 
+	BORDER-LEFT: #cdaa82 1px solid; 
+	BORDER-BOTTOM: #cdaa82 1px solid;
+}
+.MenuRightSubSection {
+	BORDER-RIGHT: #cdaa82 1px solid;
+	BORDER-TOP: #cdaa82 1px solid; 
+	BORDER-LEFT: #cdaa82 1px solid; 
+	BORDER-BOTTOM: #cdaa82 1px solid;
+	PADDING-RIGHT: 3px; 
+	PADDING-LEFT: 3px; 
+	PADDING-Top: 5px; 	
+	PADDING-Bottom: 5px; 		
+	FONT-WEIGHT: normal; 
+	FONT-SIZE: 7pt; 
+	COLOR: #94522d; 
+	FONT-FAMILY: Arial, Verdana; 
+	TEXT-ALIGN: left;
+	BACKGROUND-COLOR: #ffe6c8;
+}
+.MenuTopUser {
+	FONT-SIZE: 7pt; 
+	COLOR: #dbb08b; 
+	BACKGROUND-COLOR: #4E6261;
+}
+
+A.MenuTopUser:link {
+	COLOR: #dbb08b;
+}
+
+A.MenuTopUser:visited {
+	COLOR: #dbb08b;
+}
+
+A.MenuTopUser:active {
+	COLOR: #dbb08b;
+}
+
+A.MenuTopUser:hover {
+	TEXT-DECORATION: underline;
+}
+
+.PanelLeft {
+	WIDTH: 5%; 
+	BACKGROUND-IMAGE: url('../images/sand.jpg'); 
+	BACKGROUND-COLOR: #e6c8a0;
+}
+.PanelMenuTop
+{
+	background-image: url('../images/topmenu.jpg');
+	vertical-align: middle;
+	color: #ffe2c2;
+	height: 15px;
+	BACKGROUND-COLOR: #4E6261;
+	text-align: center;
+	align-self: center;
+}
+.PanelRight {
+	WIDTH: 5%; 
+	BORDER-RIGHT: white 1px solid; 
+	BORDER-LEFT: white 1px solid; 	
+	BACKGROUND-IMAGE: url('../images/sand.jpg'); 
+	BACKGROUND-COLOR: #e6c8a0;
+}
+.PanelMainInfo {
+	background-image: url('../images/back_sand.jpg');
+	BACKGROUND-COLOR: #f0e6dc;
+	text-align: left;
+}
+
+.RegisteredOnly{
+	font-size: 10pt;
+	color: #FF0000;
+}
+
+.SectionPanel {
+	BORDER-RIGHT: #e6c8a0 1px solid; 
+	BORDER-TOP: #e6c8a0 1px solid; 
+	BORDER-LEFT: #e6c8a0 1px solid; 
+	WIDTH: 500px; 
+	BORDER-BOTTOM: #e6c8a0 1px solid;
+}
+.SectionHeader {
+	FONT-WEIGHT: normal; 
+	FONT-SIZE: 12px; 
+	BACKGROUND-IMAGE: url('../images/sky.jpg'); 
+	VERTICAL-ALIGN: middle; 
+	TEXT-TRANSFORM: uppercase; 
+	COLOR: #800000; 
+	FONT-FAMILY: Arial, Verdana; 
+	HEIGHT: 30px; 
+	BACKGROUND-COLOR: #BDD9F5; 
+	TEXT-ALIGN: center;
+}
+.SectionShortInfo {
+	FONT-WEIGHT: normal; 
+	FONT-SIZE: 8pt; 
+	PADDING-BOTTOM: 3px; 
+	COLOR: #94522d; 
+	PADDING-TOP: 2px; 
+	FONT-FAMILY: Arial, Verdana; 
+	BACKGROUND-COLOR: #ffe6c8; 
+	BACKGROUND-COLOR: #BDD9F5; 
+	TEXT-ALIGN: center;
+}

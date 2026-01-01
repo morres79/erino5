@@ -1,0 +1,41 @@
+.footer_separator {
+	BORDER-RIGHT: white 1px solid; 
+	BORDER-TOP: white 1px solid; 
+	BACKGROUND-IMAGE: url('../img/footer/bottom_line.jpg'); 
+	BORDER-LEFT: white 1px solid; 
+	COLOR: #800000; 
+	BORDER-BOTTOM: white 1px solid; 
+	HEIGHT: 10px; 
+	BACKGROUND-COLOR: #e6c8a0;
+	margin-top: 20px;
+}
+.footer_content {
+	FONT-SIZE: 9px; 
+	COLOR: #807f7d; 
+	BACKGROUND-COLOR: #e6e3e2;
+	height: 85px;
+  	text-align: center;
+	padding: 10px 0px;
+	margin: 0px auto; /* Выровнить блочный элемент по горизонтали внутри родителя */
+}
+A.footer_content:link {
+	COLOR: #807f7d; 
+	TEXT-DECORATION: underline;
+}
+A.footer_content:visited {
+	COLOR: #807f7d; 
+	TEXT-DECORATION: underline;
+}
+A.footer_content:hover {
+	COLOR: #807f7d; 
+	TEXT-DECORATION: underline;
+}
+A.footer_content:active {
+	COLOR: #807f7d; 
+	TEXT-DECORATION: underline;
+}
+IMG.footer_content {
+	display: block;
+	margin-top: 10px;
+    height: 38px;
+}

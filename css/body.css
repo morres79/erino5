@@ -1,0 +1,67 @@
+.inf_frame { /* вся информационная колонка */
+	margin-top: 5px;
+	margin-left: 196px; /* отступ чтобы не пересекаться с vmenu */
+}
+
+.inf_main_header {
+	FONT-SIZE: 1.5em; 
+	BACKGROUND-IMAGE: url('../img/body/sky.jpg'); 
+	TEXT-TRANSFORM: uppercase;
+	COLOR: #800000; 
+	HEIGHT: 30px; 
+	BACKGROUND-COLOR: #BDD9F5;
+	padding: 5px 10px;
+}
+
+.inf_wraper { /* обёртка для отдельного информационного блока */
+	margin: 10px 0px 0px 0px;
+	background-color: #E6C8A0;
+}
+
+.inf_header {
+	padding: 5px 10px;
+	FONT-SIZE: 14pt;
+	COLOR: #800000;
+	HEIGHT: 30px;
+	TEXT-ALIGN: left;
+}
+
+.inf_body {
+	padding: 10px 10px;
+	FONT-SIZE: 14px;
+	background-color: #FFFFFF;
+	font-style: normal;
+}
+
+.inf_alert {
+    margin: 20px;
+	text-align: center;
+	font-size: 1.2em;
+	background-color: #800000;
+	padding: 15px 5px;
+	color: #FFFFFF;
+}
+
+.inf_impotent {
+	text-decoration-line: underline;
+	font-weight: 900;
+	padding: 2px 10px 3px 10px;
+	font-size: 1.2em;
+	COLOR: #800000;
+}
+
+.inf_sign {
+	padding: 10px 10px;
+	font-weight: 900;
+	font-style: italic;
+	text-transform: uppercase;
+	/* float:right; /* Прижимаем подпись справа внутри родителя*/
+	text-align: right;
+	background-color: #ffffff;
+	color: #800000; 
+}
+
+.inf_pict {
+	max-height: 500px;
+	border: solid;
+}

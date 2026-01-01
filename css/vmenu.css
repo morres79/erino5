@@ -1,0 +1,55 @@
+.vmenu {
+	WIDTH: 190px; 
+	float: left;
+}
+
+.vmenu_Div {
+	BACKGROUND-IMAGE: url('../img/vmenu/vmenu_div.jpg'); 
+	HEIGHT: 2px; 
+	BACKGROUND-COLOR: #6693BC;
+}
+
+.vmenu_Section {
+	padding-top: 10px;
+	PADDING-LEFT: 10px; 
+	FONT-SIZE: 12px; 
+	COLOR: #bc0000; 
+	BACKGROUND-COLOR: #88B3E6; 
+	HEIGHT: 30px; 
+	TEXT-ALIGN: left;
+}
+
+A.vmenu_SectionLink {
+	FONT-WEIGHT: bold; 
+	FONT-SIZE: 12px; 
+	COLOR: #bc0000; 
+	TEXT-ALIGN: left; 
+/* 	FONT-VARIANT: small-caps;*/
+}
+
+A.vmenu_SectionLink:link {
+	COLOR: #bc0000;
+}
+
+A.vmenu_SectionLink:visited {
+	COLOR: #bc0000;
+}
+
+A.vmenu_SectionLink:active {
+	COLOR: #bc0000;
+}
+
+A.vmenu_SectionLink:hover {
+	TEXT-DECORATION: underline;
+	text-transform: uppercase;
+}
+
+.vmenu_SubSection {
+	padding-top: 5px;
+	PADDING-LEFT: 15px; 
+	FONT-SIZE: 8pt; 
+	COLOR: #94522d; 
+	HEIGHT: 23px; 
+	BACKGROUND-COLOR: #BDD9F5; 
+	TEXT-ALIGN: left;
+}

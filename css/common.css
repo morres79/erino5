@@ -1,0 +1,54 @@
+BODY {
+	FONT-SIZE: 10pt; 
+	BACKGROUND-IMAGE: url('../images/sand_sun.jpg'); 
+	MARGIN: 5px; 
+	COLOR: #280000; 
+	FONT-FAMILY: Verdana, Arial; 
+	BACKGROUND-COLOR: #ffe6c8;
+}
+
+A {
+	TEXT-DECORATION: underline;
+}
+
+A:link {
+	COLOR: #FF6313;
+	TEXT-DECORATION: none;
+}
+
+A:visited {
+	COLOR: #FF6313;
+	TEXT-DECORATION: none;
+}
+
+A:hover {
+	COLOR: #D80000;
+	text-decoration: underline;
+	font-size: 1.1em;
+}
+
+A:active {
+	TEXT-DECORATION: underline;
+	font-size: 1.2em;
+	font-weight: normal;
+}
+
+A.disabled {
+    pointer-events: none; /* делаем ссылку некликабельной */
+    cursor: pointer;  /* устанавливаем курсор в виде стрелки */
+}
+
+span.remark {
+	font-size: 0.9em;
+	color: #AAA;
+	font-style:italic;
+}
+
+.conteiner{
+	display: block;
+	min-width: 996px;
+}
+
+.hidden {
+	display: none;
+}
