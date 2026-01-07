@@ -1,16 +1,17 @@
 .inf_frame { /* вся информационная колонка */
-	margin-top: 5px;
+	/* margin-top: 5px; */
 	margin-left: 196px; /* отступ чтобы не пересекаться с vmenu */
+	min-height: 800px;
 }
 
 .inf_main_header {
+	padding: 0px 5px 0px 10px;
 	FONT-SIZE: 1.5em; 
 	BACKGROUND-IMAGE: url('../img/body/sky.jpg'); 
 	TEXT-TRANSFORM: uppercase;
 	COLOR: #800000; 
 	HEIGHT: 30px; 
 	BACKGROUND-COLOR: #BDD9F5;
-	padding: 5px 10px;
 }
 
 .inf_wraper { /* обёртка для отдельного информационного блока */
@@ -19,7 +20,7 @@
 }
 
 .inf_header {
-	padding: 5px 10px;
+	padding: 0px 5px 0px 10px;
 	FONT-SIZE: 14pt;
 	COLOR: #800000;
 	HEIGHT: 30px;
@@ -34,7 +35,7 @@
 }
 
 .inf_alert {
-    margin: 20px;
+    margin: 15px;
 	text-align: center;
 	font-size: 1.2em;
 	background-color: #800000;
@@ -63,5 +64,30 @@
 
 .inf_pict {
 	max-height: 500px;
-	border: solid;
+}
+
+.inf_table td {
+	border: 1px solid black;
+	min-width: 72px;
+	text-align: center;
+}
+
+.inf_table .tbl_header {
+	background-color: lightgrey;
+	font-weight: 600;
+}
+
+.inf_table .sub {
+	background-color: #e9e9e9;
+}
+
+.inf_link {
+	display: inline-block;
+	margin-left: 20px;
+	padding: 10px;
+	background-color: #ffffff;
+}
+
+.inf_second {
+	margin-top: 30px;
 }

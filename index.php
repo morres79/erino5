@@ -1,84 +1,99 @@
 <!doctype html>
 <html lang="ru">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="css/style.css"/>
-  <!--?php echo $titlePage?-->
-  <title>ТСЖ &quot;Еринские Высоты&quot/Главная</title>
-</head>
+<?php include_once 'php/head.php'; ?>
 
 <body>
-  <!--script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script-->
 
-  <?php include_once 'header.php'; ?>
+    <?php include_once 'header.php'; ?>
 
- 
-  <section>
-    <div class="conteiner">
-      <?php include 'vmenu.php'; ?>
-      <div class="inf_frame">
-        <div class="inf_main_header">новости ТСЖ</div>
-        <div class = "inf_wraper">
-          <div class = "inf_header">ВАЖНОЕ СООБЩЕНИЕ</div>
-            <div class =  "inf_body">
-              В случае экстренной необходимости (при прорывах трубопроводов, отключений электроэнергии, 
-              <div class="inf_alert">
-                <strong>жгучем желании погасить долг по коммуналке</strong> 
-              </div>
-               и т.п.) можно <a href="contacts.php">звонить</a> в любое время. Телефоны доступны в разделе <a href="contacts.php">Контакты</a>
-            </div>
-        </div>  
-        <div class = "inf_wraper">
-            <div class = "inf_header">ОЧНО-ЗАОЧНОЕ ОТЧЁТНОЕ СОБРАНИЕ (март-апрель 2025г.)</div>
-            <div class =  "inf_body"><p>Очно-заочное отчетное-выборное собрание собственников  помещений дома 5 по улице Высокая поселка Ерино г. Москвы проводится по  инициативе Правления ТСЖ &laquo;Еринские высоты&raquo;. </p>
-              <div class = "inf_alert">
-                Основная часть собрания  состоится 23.03.2025 года в 12:00&nbsp;в помещении  офиса ТСЖ по адресу: п. Ерино ул. Высокая д.5
-                Дата начала приёма решений собственников: «23» марта 2025 года с 12-00 часов.
-                Дата окончания приёма решений собственников: «20» апреля 2025 года  до 20-00 часов.
-              </div>
-                  ПОВЕСТКА ДНЯ:
-              <ol>
-                <li>Выбор председателя собрания.</li>
-                <li>Выбор секретаря собрания.</li>
-                <li>Выбрать счетную комиссию.</li>
-                <li>Отчёт об исполнении сметы доходов и расходов товарищества за 2024г. (<a href="Doc/2025/smeta_2024.pdf">Приложение №1</a>).</li>
-                <li>Заключение ревизионной комиссии товарищества, по результатам проверки годовой бухгалтерской (финансовой) отчётности товарищества за 2024 г. (<a href="Doc/2025/reviziya_ahd_za_2024.pdf">Приложение №2</a>).</li>
-                <li>Отчёт о выполнении годового плана содержания и ремонта общего имущества в многоквартирном доме за 2024г. (<a href="Doc/2025/otchet_2024.pdf">Приложение № 3</a>).</li>
-                <li>Годовой план содержания и ремонта общего имущества в многоквартирном доме на 2025г. (<a href="Doc/2025/plan_2025.pdf">Приложение № 4</a>).</li>
-                <li>Годовой отчёт о деятельности правления товарищества за 2024г. (<a href="Doc/2025/otchet_predsedatelya_za_2024.pdf">Приложение №5</a>).</li>
-                <li>Утвердить смету доходов и расходов товарищества на 2025г. (<a href="Doc/2025/smeta_2025.pdf">Приложение №6</a>)</li>
-                <li>Предложение по замене общедомовых приборов учета ГВС и отопления за счет средств Фонда Капитального Ремонта.</li>
-                <li>Определение места хранения протокола общего собрания собственников (ОСС) помещений, решений собственников по вопросам, поставленным на голосование.</li>
-                <li>Определение помещения в многоквартирном доме (МКД), доступного для всех собственников помещений, для размещения сообщений о решениях, принятых собранием и итогов голосования.</li>
-                <li>Разное.</li>
-              </ol>
-              <div class = "inf_impotent">Участие в заочном голосовании ВСЕХ членов ТСЖ "Еринские высоты" СТРОГО ОБЯЗАТЕЛЬНО!</div>
-              <div class = "inf_sign">АДМИНИСТРАЦИЯ ТСЖ</div>
-            </div>
-        </div>
+    <section>
+        <div class="conteiner">
+            <?php include 'vmenu.php'; ?>
+            <div class="inf_frame">
+                <div class="inf_main_header">новости ТСЖ</div>
 
-        <div class = "inf_wraper">
-          <div class = "inf_header">ОБЪЯВЛЕНИЕ!!!</div>
-          <div class = "inf_body">
-            Lorem ipsum <span class="remark"> sit amet consectetur adipisicing elit</span>. Eaque tempora maxime ut commodi exercitationem sint cupiditate debitis molestias velit perferendis? Nostrum error nesciunt aliquam odio? Molestias recusandae reprehenderit eum omnis.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nisi omnis tempore nam adipisci autem veritatis minus. Porro quisquam explicabo necessitatibus cumque, incidunt laboriosam, magnam ducimus sit nobis quaerat ab?
-          </div>
-        </div>
+                      <div class = "inf_wraper">
+                          <div class = "inf_header">Тарифы на коммунальные услуги</div>
+                          <div class = "inf_body">
+                              Согласно приказам Департамента экономической политики и развития г. МОСКВЫ №<b>ТР188/23 от 28.11. 2023г. , № 186-ТР от 15.11.2012г.и № ТР 290/23 от 15.12.2023 г., № ТР 284/23 от 14.12.2023г., № ТР 231/23 от 14.12.2023г</b>.<br>
+                              <br>
+                              С 1 июля 2024 г. устанавливаются следующие тарифы на:<br>
+                              <b>ОБРАЩЕНИЕ С ТКО</b> -8,43 руб./м<sup>2</sup><br>
+                              <b>ГОРЯЧУЮ ВОДУ</b> – 233,65 руб./м<sup>3</sup><br> 
+                              <b>ХОЛОДНУЮ ВОДУ</b> – 62,78 руб./м<sup>3</sup><br>
+                              <b>ВОДООТВЕДЕНИЕ</b> – 51,62 руб./м<sup>3</sup><br>
+                              <b>ЭЛЕКТРОЭНЕРГИЯ</b> – 7,16 руб кВтч<br>
+                              <b>РЕЗЕРВНЫЙ ФОНД</b> – 5,50 руб./м<sup>2</sup><br>
+                              <div class="inf_sign">Администрация ТСЖ</div>
+                          </div>
+                      </div>
+            
+                <div class="inf_link"><a href="archive.php">Перейти в Архив новостей</a></div>
 
-        <div class = "inf_wraper">
-          <div class = "inf_header">ОБЪЯВЛЕНИЕ!!!</div>
-          <div class = "inf_body">
-            Lorem ipsum <span class="remark"> sit amet consectetur adipisicing elit</span>. Eaque tempora maxime ut commodi exercitationem sint cupiditate debitis molestias velit perferendis? Nostrum error nesciunt aliquam odio? Molestias recusandae reprehenderit eum omnis.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nisi omnis tempore nam adipisci autem veritatis minus. Porro quisquam explicabo necessitatibus cumque, incidunt laboriosam, magnam ducimus sit nobis quaerat ab?
-          </div>
-        </div>
+                <div class="inf_main_header">Важные объявления</div>
 
-      </div> <!-- inf_frame -->
-    </div> <!-- conteiner -->
-  </section>
-  
+                <div class = "inf_wraper">
+                    <div class = "inf_header">График работы ТСЖ</div>
+                    <div class =  "inf_body">
+                      ТСЖ "Еринские Высоты" работает<br>
+                      <br>
+                      <span class="inf_impotent">с понедельника по пятницу с 08:00 часов до 17:00 часов.</span><br>
+                      <br>
+                      Суббота, воскресение - выходные дни.<br>
+                      <br>
+                      В случае экстренной необходимости (при прорывах трубопроводов, отключений электроэнергии, 
+                      <div class="inf_alert">жгучем желании погасить долг по коммуналке</div>
+                      и т.п.) можно <a href="contacts.php">звонить</a> в любое время. Телефоны доступны в разделе <a href="contacts.php">Контакты.</a>
+                      <div class="inf_sign">Администрация ТСЖ</div>
+                    </div>
+                </div>  
+
+                <div class = "inf_wraper">
+                    <div class = "inf_header">Поэтажный график уборки подъездов</div>
+                    <div class = "inf_body">
+                        <ul>
+                            <li>ПОНЕДЕЛЬНИК 	- <strong>2,3,4 этажи</strong></li>
+                            <li>ВТОРНИК 		- <strong>5,6,7 этажи</strong></li>
+                            <li>СРЕДА 		- <strong>8,9,10 этажи</strong></li>
+                            <li>ЧЕТВЕРГ 		- <strong>11,12,13 этажи</strong></li>
+                            <li>ПЯТНИЦА		- <strong>14,15,16 этажи</strong></li>
+                            <li>СУББОТА 		- <strong>17 этажи</strong></li>
+                        </ul>
+                        <div class="inf_sign">Администрация ТСЖ</div>
+                    </div>
+                </div>
+
+                <div class = "inf_wraper">
+                    <div class = "inf_header">Квитанции на оплату коммунальных услуг </div>
+                    <div class = "inf_body">
+                        Уважаемые владельцы (собственники) квартир. <br>
+                        <br>
+                        Квитанции на оплату коммунальных услуг своевременно вынимайте из своих почтовых ящиков! <br>
+                        В индивидуальных случаях, при длительном отсутствии на территории Московской области, <strong>квитанция может быть выслана 
+                        Вам факсом или по электронной почте</strong> (обращаться к управляющей 
+                        Борисовой Л.Н. по тел. 8-964-768-14-18). <br>
+                        <div class="inf_sign">Администрация ТСЖ</div>
+                    </div>
+                </div>
+
+                <div class = "inf_wraper">
+                    <div class = "inf_header"> Перепланировка квартир </div>
+                    <div class = "inf_body"> 
+                        Уважаемые собственники квартир! <br>
+                        <br>
+                        Предостерегаем вас от незаконных перепланировок квартир. <br>
+                        Ставим всех в известность о том, что <strong>при обнаружении незаконных перепланировок</strong>, особенно связанных с изменением несущих 
+                        конструкций,<strong> Администрация ТСЖ немедленно выдаст ПРЕДПИСАНИЕ об устранении указанных нарушений</strong>. В случае, если в течение 
+                        14 дней перепланировка не будет узаконена, ТСЖ незамедлительно обратится в СУД с исковым заявлением. <br>
+                        <div class="inf_sign">Администрация ТСЖ</div>
+                    </div>
+                </div>
+
+            </div> <!-- inf_frame -->
+        </div> <!-- conteiner -->
+
+    </section>
   <!--Подвал-->
   <?php include_once 'footer.php'; ?>
 

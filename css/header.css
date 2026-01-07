@@ -43,13 +43,15 @@
 .header_menu {
 	display: flex;
 	justify-content: center;
-	HEIGHT: 15px; 
+	HEIGHT: 20px; 
 	FONT-SIZE: 7pt;
 	BACKGROUND-IMAGE: url('../img/header/topmenu.jpg');
 	VERTICAL-ALIGN: middle; 
 	COLOR: #4E6261; 
 	BACKGROUND-COLOR: #4E6261; 
 	TEXT-ALIGN: center;
+	list-style-type: none; /* не отображать маркеры ненумированного списка */
+	padding-left: 0px; /* чтобы текст не сдвигался, несмотря на list-style-type */
 }
 
 .header_menu li {
@@ -70,4 +72,5 @@
 
 .header_menu a:hover {
 	TEXT-DECORATION: underline;
+	text-transform: uppercase;
 }

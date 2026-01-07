@@ -23,12 +23,12 @@
 		</div> 
  	</div>
 
-	<div class = "header_menu">
+	<ul class = "header_menu">
 		<li><a href="/">Главная</a></li>
 		<li><a href="contacts.php">Контакты</a></li>					
 		<li><a href="http://erino5.flybb.ru/forum2.html" target="_blank">Форум</a></li>
-		<li><a href="siteinfo.php">О сайте</a></li>					
-	</div>		
+		<li><a href="siteinfo.php">О сайте</a></li>
+	</ul>
 
 </div><!--conteiner-->
 

@@ -1,6 +1,6 @@
 BODY {
 	FONT-SIZE: 10pt; 
-	BACKGROUND-IMAGE: url('../images/sand_sun.jpg'); 
+	BACKGROUND-IMAGE: url('../img/bg/sand_sun.jpg'); 
 	MARGIN: 5px; 
 	COLOR: #280000; 
 	FONT-FAMILY: Verdana, Arial; 
@@ -9,6 +9,10 @@ BODY {
 
 A {
 	TEXT-DECORATION: underline;
+}
+
+A>img {
+		border: solid;
 }
 
 A:link {
@@ -46,7 +50,6 @@ span.remark {
 
 .conteiner{
 	display: block;
-	min-width: 996px;
 }
 
 .hidden {

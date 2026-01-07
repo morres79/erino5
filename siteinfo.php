@@ -1,13 +1,7 @@
 <!doctype html>
 <html lang="ru">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="css/style.css"/>
-  <!--?php echo $titlePage?-->
-  <title>ТСЖ &quot;Еринские Высоты&quot/О сайте ТСЖ</title>
-</head>
+<?php include_once 'php/head.php'; ?>
 
 <body>
 
@@ -43,5 +37,8 @@
     </div> <!-- conteiner -->
 
   </section>
+  <!--Подвал-->
+  <?php include_once 'footer.php'; ?>
+
 </body>
 </html>
