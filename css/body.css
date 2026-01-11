@@ -2,6 +2,8 @@
 	/* margin-top: 5px; */
 	margin-left: 196px; /* отступ чтобы не пересекаться с vmenu */
 	min-height: 800px;
+	background-image: url('../images/back_sand.jpg');
+	BACKGROUND-COLOR: #f0e6dc;
 }
 
 .inf_main_header {
@@ -32,6 +34,13 @@
 	FONT-SIZE: 14px;
 	background-color: #FFFFFF;
 	font-style: normal;
+}
+
+.inf_comment {
+    margin: 3px;
+	padding: 2px 4px;
+	font-size: 0.9em;
+	background-color: #dbdbdb;
 }
 
 .inf_alert {

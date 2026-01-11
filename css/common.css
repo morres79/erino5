@@ -50,6 +50,7 @@ span.remark {
 
 .conteiner{
 	display: block;
+	min-width: 876px;
 }
 
 .hidden {
