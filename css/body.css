@@ -2,8 +2,9 @@
 	/* margin-top: 5px; */
 	margin-left: 196px; /* отступ чтобы не пересекаться с vmenu */
 	min-height: 800px;
-	background-image: url('../images/back_sand.jpg');
+	background-image: url('../img/body/back_sand.jpg');
 	BACKGROUND-COLOR: #f0e6dc;
+	min-height: 80vh;
 }
 
 .inf_main_header {

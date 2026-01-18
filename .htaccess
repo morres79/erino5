@@ -1,4 +1,6 @@
-AddDefaultCharset Off
-<IfModule dir_module>
-    DirectoryIndex index.php
-</IfModule>
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule (.*) index.php/?action=$1 [QSA,L]

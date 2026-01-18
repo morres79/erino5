@@ -1,0 +1,11 @@
+{
+    "/": "\\App\\Controllers\\IndexController:index",
+    "/about": "\\App\\Controllers\\IndexController:about",
+    "/archive": "\\App\\Controllers\\IndexController:archive",
+    "/about_house": "\\App\\Controllers\\IndexController:about_house",
+    "/contacts": "\\App\\Controllers\\IndexController:contacts",
+    "/docs": "\\App\\Controllers\\IndexController:docs",
+    "/tv": "\\App\\Controllers\\IndexController:tv",
+    "/register": "\\App\\Controllers\\IndexController:register",
+    "/siteinfo": "\\App\\Controllers\\IndexController:siteinfo"
+}

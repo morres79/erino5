@@ -1,0 +1,1 @@
+{"version":1,"defects":{"BookTest::testGetInfoWithTitlePrice":7,"BookTest::testPrice":7},"times":{"BookTest::testGetInfoWithTitlePrice":0.011,"BookTest::testPrice":0}}

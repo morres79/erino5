@@ -1,3 +1,10 @@
+/* footer { 
+	position: fixed;
+	bottom: 2;
+	left: 2;
+	right: 2;
+}
+ */
 .footer_separator {
 	BORDER-RIGHT: white 1px solid; 
 	BORDER-TOP: white 1px solid; 
