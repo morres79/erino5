@@ -5,7 +5,11 @@
     "/about_house": "\\App\\Controllers\\IndexController:about_house",
     "/contacts": "\\App\\Controllers\\IndexController:contacts",
     "/docs": "\\App\\Controllers\\IndexController:docs",
-    "/tv": "\\App\\Controllers\\IndexController:tv",
+    "/live_rules": "\\App\\Controllers\\IndexController:live_rules",
+    "/manager_rules": "\\App\\Controllers\\IndexController:manager_rules",
+    "/org_rules": "\\App\\Controllers\\IndexController:org_rules",
+    "/page": "\\App\\Controllers\\IndexController:page",
     "/register": "\\App\\Controllers\\IndexController:register",
-    "/siteinfo": "\\App\\Controllers\\IndexController:siteinfo"
+    "/siteinfo": "\\App\\Controllers\\IndexController:siteinfo",
+    "/tv": "\\App\\Controllers\\IndexController:tv"
 }

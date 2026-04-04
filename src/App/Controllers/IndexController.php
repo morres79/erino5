@@ -54,6 +54,38 @@ class IndexController extends BaseController {
         ]);
     }
 
+    public function live_rules() {   
+        $titlePage = 'ПРАВИЛА ПРОЖИВАНИЯ';
+
+        return $this->render('live_rules', [
+            'titlePage' => $titlePage,
+        ]);
+    }
+
+    public function manager_rules() {   
+        $titlePage = 'Должностная инструкция управляющего домом';
+
+        return $this->render('manager_rules', [
+            'titlePage' => $titlePage,
+        ]);
+    }
+
+    public function org_rules() {   
+        $titlePage = 'СОЗДАНИЕ И ДЕЯТЕЛЬНОСТЬ ТСЖ';
+
+        return $this->render('org_rules', [
+            'titlePage' => $titlePage,
+        ]);
+    }
+
+    public function page() {   
+        $titlePage = 'ТЕСТОВАЯ СТРАНИЦА';
+
+        return $this->render('page', [
+            'titlePage' => $titlePage,
+        ]);
+    }
+
     public function tv() {   
         $titlePage = 'ТЕЛЕВИДЕНИЕ';
 
