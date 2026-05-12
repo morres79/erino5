@@ -14,6 +14,18 @@
                 <div class="inf_main_header">новости ТСЖ</div>
 
                 <div class = "inf_wraper">
+                    <div class = "inf_header">График отключения горячей воды в 2026 г.</div>
+                    <div class = "inf_body">
+                        <h5>ОБЪЯВЛЕНИЕ!</h5>
+                        <div class="inf_alert">
+                            В связи с профилактическими работами на котельной АО «Санаторий «Ерино» отключение горячей воды запланировано на следующие даты:
+                        </div>
+                            <p><strong>c 25 мая по 27 мая,<br>с 06 июля по 08 июля,<br>с 27 июля по 30 июля.</strong></p>
+                        <div class="inf_sign">Администрация ТСЖ</div>
+                    </div>
+                </div>
+
+                <div class = "inf_wraper">
                     <div class = "inf_header">Электронное собрание в ГИС ЖКХ (16.02.2026 - 01.04.2026)</div>
                     <div class = "inf_body">
                         <h5>Уважаемые собственники!</h5>
