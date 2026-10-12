@@ -5,27 +5,29 @@
 <div class="conteiner">
 
 	<div class = "header_site">
-		<div class = "left"> 
+		<div class = "left">
 			<img alt = "house pict" src="img/header/header_left_image.jpg">
-		</div> 
-		<div class = "center"> 
+		</div>
+		<div class = "center">
 			<span class = "main_text"><!--Название сайта-->
 			ТСЖ "Еринские Высоты"
 			</span>
 			<br>
 			<span class = "sub_text"><!--Эпиграф-->
-				Официальный сайт ТСЖ 
+				Официальный сайт ТСЖ
 				&quot;Еринские Высоты&quot; - г. Москва, пос. Ерино, Ул.Высокая, д.5
-			</span> 
+			</span>
 		</div>
-		<div class = "right"> 
+		<div class = "right">
 			<img alt = "house pict" src="img/header/logo.jpg">
-		</div> 
+		</div>
  	</div>
 
 	<ul class = "header_menu">
 		<li><a href="/">Главная</a></li>
-		<li><a href="contacts.php">Контакты</a></li>					
+		<li><a href="contacts.php">Контакты</a></li>
+		<li><a href="news.php">Новости</a></li>
+		<li><a href="account.php">Личный кабинет</a></li>
 		<li><a href="http://erino5.flybb.ru/forum2.html" target="_blank">Форум</a></li>
 		<li><a href="siteinfo.php">О сайте</a></li>
 	</ul>

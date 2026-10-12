@@ -12,7 +12,8 @@
 	BACKGROUND-IMAGE: url('../img/body/sky.jpg'); 
 	TEXT-TRANSFORM: uppercase;
 	COLOR: #800000; 
-	HEIGHT: 30px; 
+	min-height: 30px;
+	height: auto;
 	BACKGROUND-COLOR: #BDD9F5;
 }
 
@@ -25,7 +26,8 @@
 	padding: 0px 5px 0px 10px;
 	FONT-SIZE: 14pt;
 	COLOR: #800000;
-	HEIGHT: 30px;
+	min-height: 30px;
+	height: auto;
 	TEXT-ALIGN: left;
 }
 

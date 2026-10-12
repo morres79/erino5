@@ -1,0 +1,39 @@
+CREATE TABLE IF NOT EXISTS users (
+ id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+ email VARCHAR(190) NOT NULL UNIQUE,
+ name VARCHAR(190) NOT NULL,
+ apartment VARCHAR(32) NOT NULL,
+ password_hash VARCHAR(255) NOT NULL,
+ role VARCHAR(16) NOT NULL DEFAULT 'owner',
+ status VARCHAR(16) NOT NULL DEFAULT 'pending',
+ created_at DATETIME NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+CREATE TABLE IF NOT EXISTS news (
+ id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+ title VARCHAR(255) NOT NULL,
+ body MEDIUMTEXT NOT NULL,
+ status VARCHAR(16) NOT NULL DEFAULT 'draft',
+ discussion_enabled TINYINT NOT NULL DEFAULT 0,
+ author_id BIGINT UNSIGNED NOT NULL,
+ created_at DATETIME NOT NULL,
+ published_at DATETIME NULL,
+ updated_at DATETIME NOT NULL,
+ FOREIGN KEY (author_id) REFERENCES users(id),
+ INDEX news_feed (status, published_at, id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+CREATE TABLE IF NOT EXISTS comments (
+ id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+ news_id BIGINT UNSIGNED NOT NULL,
+ user_id BIGINT UNSIGNED NOT NULL,
+ body TEXT NOT NULL,
+ created_at DATETIME NOT NULL,
+ FOREIGN KEY (news_id) REFERENCES news(id),
+ FOREIGN KEY (user_id) REFERENCES users(id),
+ INDEX comment_thread (news_id, id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+CREATE TABLE IF NOT EXISTS rate_limits (
+ bucket CHAR(64) PRIMARY KEY,
+ attempts INT NOT NULL,
+ expires_at DATETIME NOT NULL,
+ INDEX rate_expiry (expires_at)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
