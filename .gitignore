@@ -2,3 +2,8 @@
 /.env
 /tests/*.sqlite
 /tests/*.sqlite-*
+/app/.news-id-revision
+/docker-build.log
+/.private/
+__pycache__/
+*.pyc

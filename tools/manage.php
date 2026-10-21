@@ -9,6 +9,14 @@ try {
         $sql = file_get_contents(dirname(__DIR__).'/database/schema.sql');
         foreach (explode(';', $sql) as $statement) if (trim($statement) !== '') db()->exec($statement);
         echo "Schema installed. Existing records preserved.\n";
+    } elseif ($action === 'migrate') {
+        if (db()->getAttribute(PDO::ATTR_DRIVER_NAME) !== 'mysql') throw new RuntimeException('Migrations require MySQL/MariaDB.');
+        foreach (glob(dirname(__DIR__).'/database/migrations/*.sql') as $file) {
+            foreach (explode(';', file_get_contents($file)) as $statement) {
+                if (trim($statement) !== '') db()->exec($statement);
+            }
+        }
+        echo "Database migrations applied. Existing records preserved.\n";
     } elseif ($action === 'admin' || $action === 'reset-password') {
         $email = strtolower($argv[2] ?? '');
         if (!filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($email) > 190) throw new RuntimeException('Pass a valid email as the third argument.');
@@ -25,6 +33,6 @@ try {
         }
         echo "Temporary password (store securely and change after login): ".$password."\n";
     } else {
-        echo "Usage:\n php tools/manage.php install\n php tools/manage.php admin EMAIL\n php tools/manage.php reset-password EMAIL\n";
+        echo "Usage:\n php tools/manage.php install\n php tools/manage.php migrate\n php tools/manage.php admin EMAIL\n php tools/manage.php reset-password EMAIL\n";
     }
 } catch (Throwable $e) { fwrite(STDERR, $e->getMessage()."\n"); exit(1); }

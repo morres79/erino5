@@ -1,4 +1,7 @@
 BODY {
+	display: flex;
+	flex-direction: column;
+	min-height: calc(100vh - 10px);
 	FONT-SIZE: 10pt; 
 	BACKGROUND-IMAGE: url('../img/bg/sand_sun.jpg'); 
 	MARGIN: 5px; 
@@ -55,4 +58,10 @@ span.remark {
 
 .hidden {
 	display: none;
+}
+body > header,
+body > main,
+body > section,
+body > footer {
+	flex-shrink: 0;
 }

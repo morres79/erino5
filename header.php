@@ -26,7 +26,6 @@
 	<ul class = "header_menu">
 		<li><a href="/">Главная</a></li>
 		<li><a href="contacts.php">Контакты</a></li>
-		<li><a href="news.php">Новости</a></li>
 		<li><a href="account.php">Личный кабинет</a></li>
 		<li><a href="http://erino5.flybb.ru/forum2.html" target="_blank">Форум</a></li>
 		<li><a href="siteinfo.php">О сайте</a></li>

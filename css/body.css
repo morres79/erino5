@@ -102,3 +102,21 @@
 .inf_second {
 	margin-top: 30px;
 }
+.inf_header a,
+.inf_header a:link,
+.inf_header a:visited,
+.inf_header a:hover,
+.inf_header a:active {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+.inf_header, .inf_body { overflow-wrap: anywhere; }
+.inf_body .news-list { padding-left: 2em; margin: 12px 0; text-align: left; }
+.inf_body .news-list li + li { margin-top: 4px; }
+
+.inf_body .news-more { margin: 12px 0 4px; font-size: .9em; }
+.inf_body .news-more a,
+.inf_body .news-more a:visited { color: #8a7163; }
+.inf_body .news-more a:hover,
+.inf_body .news-more a:active { color: #765749; font-size: inherit; }

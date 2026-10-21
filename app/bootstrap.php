@@ -22,6 +22,7 @@ function db(): PDO {
         $c = settings();
         if (!$c['dsn']) throw new RuntimeException('Database is not configured');
         $options = [
+            PDO::ATTR_TIMEOUT => 5,
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
             PDO::ATTR_EMULATE_PREPARES => false,
@@ -31,6 +32,7 @@ function db(): PDO {
             $options[PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT] = $c['ssl_verify'] ?? true;
             if (!empty($c['ssl_ca'])) $options[PDO::MYSQL_ATTR_SSL_CA] = $c['ssl_ca'];
         }
+        if (str_starts_with($c['dsn'], 'mysql:')) ini_set('mysqlnd.net_read_timeout', '10');
         $pdo = new PDO($c['dsn'], $c['user'], $c['password'], $options);
         if ((!empty($c['ssl']) || !empty($c['ssl_ca'])) && $pdo->query("SHOW SESSION STATUS LIKE 'Ssl_cipher'")->fetchColumn(1) === '') {
             $pdo = null;
@@ -47,7 +49,7 @@ function query(string $sql, array $params = []): PDOStatement {
 }
 function h($value): string { return htmlspecialchars((string)$value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); }
 function status_label(string $status): string {
-    return ['pending' => 'На проверке', 'approved' => 'Подтверждён', 'blocked' => 'Заблокирован', 'draft' => 'Черновик', 'published' => 'Опубликована'][$status] ?? $status;
+    return ['pending' => 'На проверке', 'approved' => 'Подтверждён', 'blocked' => 'Заблокирован', 'draft' => 'Черновик', 'published' => 'Опубликована', 'archived' => 'В архиве', 'deleted' => 'Удалена'][$status] ?? $status;
 }
 function now(): string { return date('Y-m-d H:i:s'); }
 function start_session(): void {
@@ -56,6 +58,12 @@ function start_session(): void {
         session_name('erino_session');
         session_set_cookie_params(['httponly' => true, 'secure' => !empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off', 'samesite' => 'Lax', 'path' => '/']);
         session_start();
+    }
+    $revisionPath = getenv('ERINO_NEWS_REVISION_FILE') ?: __DIR__.'/.news-id-revision';
+    $revision = is_file($revisionPath) ? trim(file_get_contents($revisionPath)) : '';
+    if ($revision !== '' && ($_SESSION['news_id_revision'] ?? '') !== $revision) {
+        $_SESSION['csrf'] = bin2hex(random_bytes(32));
+        $_SESSION['news_id_revision'] = $revision;
     }
     header('Cache-Control: no-store');
     header('X-Content-Type-Options: nosniff');
@@ -88,16 +96,23 @@ function text_field(string $key, int $max): string {
     if ($v === '' || preg_match('//u', $v) !== 1 || iconv_strlen($v, 'UTF-8') > $max) throw new DomainException('Проверьте заполнение поля: '.$key.'.');
     return $v;
 }
-function redirect(string $url): never { header('Location: '.$url, true, 303); exit; }
+function redirect(string $url): never {
+    if (session_status() === PHP_SESSION_ACTIVE) session_write_close();
+    header('Location: '.$url, true, 303); exit;
+}
 function notice(string $message): void { $_SESSION['notice'] = $message; }
 function page_start(string $title): void {
+    csrf();
+    $message = $_SESSION['notice'] ?? null;
+    unset($_SESSION['notice']);
+    if (session_status() === PHP_SESSION_ACTIVE) session_write_close();
     $pageTitle = $title; $portalStyles = true;
     echo '<!doctype html><html lang="ru">';
     include dirname(__DIR__).'/php/head.php';
     echo '<body>';
     include dirname(__DIR__).'/header.php';
-    echo '<main class="portal"><h1>'.h($title).'</h1><nav class="portal-nav"><a href="news.php">Новости</a> <a href="account.php">Личный кабинет</a> <a href="admin.php">Управление</a></nav>';
-    if (isset($_SESSION['notice'])) { echo '<p role="status">'.h($_SESSION['notice']).'</p>'; unset($_SESSION['notice']); }
+    echo '<main class="portal"><h1>'.h($title).'</h1><nav class="portal-nav"><a href="index.php">Главная</a> <a href="archive.php">Архив новостей</a> <a href="account.php">Личный кабинет</a> <a href="admin.php">Управление</a></nav>';
+    if ($message !== null) echo '<p role="status">'.h($message).'</p>';
 }
 function page_end(): void { echo '</main>'; include dirname(__DIR__).'/footer.php'; echo '</body></html>'; }
 function render_error(Throwable $e): void {
@@ -117,3 +132,4 @@ function limit_attempt(string $action, string $identity, int $maximum, int $seco
     $count = query('SELECT attempts FROM rate_limits WHERE bucket = ?', [$key])->fetchColumn();
     if ($count > $maximum) { http_response_code(429); throw new DomainException('Слишком много попыток. Попробуйте позже.'); }
 }
+require_once __DIR__.'/news_format.php';

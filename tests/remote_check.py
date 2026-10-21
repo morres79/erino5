@@ -77,7 +77,7 @@ echo 'PASS remote schema, restricted application account, TLS '.$cipher.PHP_EOL;
         assert code == 200 and 'Добавить новость' in body, 'Administrator form unavailable'
         assert request('/news.php')[0] == 200, 'News feed failed'
         code, body = request('/index.php')
-        assert code == 200 and 'График отключения' in body, 'Legacy homepage failed'
+        assert code == 200 and 'График работы ТСЖ' in body, 'Legacy homepage failed'
         print('PASS HTTP guest restrictions, administrator login, news editor, feed and legacy homepage')
     finally:
         server.terminate()

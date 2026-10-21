@@ -1,5 +1,6 @@
 """Validate the real MySQL schema and PDO queries in a disposable local instance."""
 import argparse
+import json
 import os
 from pathlib import Path
 import socket
@@ -45,6 +46,12 @@ with tempfile.TemporaryDirectory(prefix='erino-mysql-') as folder:
         # Run installation twice: the schema must preserve existing data and be repeatable.
         for _ in range(2):
             subprocess.run(php + [str(root / 'tools/manage.php'), 'install'], env=env, check=True, capture_output=True)
+        # Simulate the pre-signature schema in this disposable server, then migrate twice.
+        subprocess.run(client + ['erino_test'], input=b'ALTER TABLE news DROP COLUMN signature, DROP COLUMN is_important;', capture_output=True, check=True)
+        for _ in range(2):
+            migrated = subprocess.run(php + [str(root / 'tools/manage.php'), 'migrate'], env=env, capture_output=True, text=True)
+            if migrated.returncode:
+                raise RuntimeError(migrated.stderr)
         created = subprocess.run(php + [str(root / 'tools/manage.php'), 'admin', 'test@example.test'], env=env, check=True, capture_output=True)
         assert b'Temporary password' in created.stdout
         refused = subprocess.run(php + [str(root / 'tools/manage.php'), 'admin', 'test@example.test'], env=env, capture_output=True)
@@ -69,6 +76,23 @@ echo "PASS MySQL schema, repeatable install, admin creation, role, rate limiter,
 ''', encoding='utf-8')
         result = subprocess.run(php + [str(probe), str(root)], env=env, check=True, capture_output=True, text=True)
         print(result.stdout.strip())
+        imported = subprocess.run(php + [str(root / 'tools/import_legacy.php'), '--apply', '--backup-dir=' + str(temp / 'backups')], env=env, capture_output=True, text=True)
+        assert imported.returncode == 0, imported.stderr
+        applied = subprocess.run(php + [str(root / 'tools/reindex_news.php'), '--apply', '--backup-dir=' + str(temp / 'backups')], env=env, capture_output=True, text=True)
+        assert applied.returncode == 0, applied.stderr
+        report = json.loads(applied.stdout)
+        assert report['count'] == 28 and report['mapping']['1'] == 28 and report['next_id'] == 29
+        verification = subprocess.run(client + ['--batch','--skip-column-names','erino_test'], input=b"SELECT news_id FROM comments; SELECT COUNT(*) FROM news; SELECT id FROM news ORDER BY id LIMIT 1; SELECT AUTO_INCREMENT FROM information_schema.tables WHERE table_schema='erino_test' AND table_name='news';", check=True, capture_output=True)
+        assert verification.stdout.decode().split() == ['28','28','1','29'], verification.stdout.decode()
+        repeated = subprocess.run(php + [str(root / 'tools/reindex_news.php'), '--apply', '--backup-dir=' + str(temp / 'backups')], env=env, capture_output=True, text=True)
+        assert repeated.returncode == 0 and json.loads(repeated.stdout)['changed'] == 0, repeated.stderr
+        print('PASS MySQL chronological IDs, preserved comments, reset AUTO_INCREMENT and repeatability')
+        for _ in range(2):
+            imported = subprocess.run(php + [str(root / 'tools/import_legacy.php'), '--important', '--apply', '--backup-dir=' + str(temp / 'backups')], env=env, capture_output=True, text=True)
+            assert imported.returncode == 0, imported.stderr
+        verification = subprocess.run(client + ['--batch','--skip-column-names','erino_test'], input=b"SELECT COUNT(*) FROM news; SELECT COUNT(*) FROM news WHERE is_important=1 AND status='published'; SELECT news_id FROM comments;", check=True, capture_output=True)
+        assert verification.stdout.decode().split() == ['32','4','28'], verification.stdout.decode()
+        print('PASS MySQL repeatable important flag migration and idempotent notice import with stable IDs')
     finally:
         subprocess.run(admin + ['shutdown'], capture_output=True, timeout=15)
         try:
